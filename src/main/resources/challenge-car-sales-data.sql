@@ -21,7 +21,8 @@ CREATE TABLE `Order`(
 `Order_Id` int PRIMARY KEY,
 `Amount` int ,
 `Order_Date` VARCHAR(10),
-`Customer_Id` int
+ `Customer_Id` int,
+ FOREIGN KEY (`Customer_Id`) REFERENCES customer(`customer_Id`)
 );
 
 --insert the value in order table
@@ -45,3 +46,5 @@ UPDATE `carsales`.`salesperson` SET `commision_Rate`=28 WHERE `commision_Rate`=2
 --update the rating for the customer whose rating is 100 and set it as 150
 UPDATE `carsales`.`customer` SET `Rating`=150 WHERE `Rating`=100;
 --task completed
+
+
