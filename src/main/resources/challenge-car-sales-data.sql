@@ -5,7 +5,9 @@ CREATE TABLE `Customer`(
 `Last_Name` VARCHAR(20),
 `City` VARCHAR(20),
 `Rating` int,
-`Sales_Id` int
+`Sales_Id` int,
+FOREIGN KEY (`Sales_Id`) REFERENCES SalesPerson(`Sales_Id`)
+
 );
 
 --insert value in customer table
