@@ -33,3 +33,15 @@ INSERT INTO `carsales`.`order` VALUES (3009,145,'10-10-2012',2002);
 INSERT INTO `carsales`.`order` VALUES (3007,167,'02-04-2021',2002);
 INSERT INTO `carsales`.`order` VALUES (3008,189,'02-03-1999',2006);
 INSERT INTO `carsales`.`order` VALUES (3010,100,'18-09-2000',2004);
+
+--delete the OrderDetail of order_id 3008 from the order table
+DELETE FROM `carsales`.`order` WHERE Order_Id=3008;
+--delete all salespersons whose commision rate is 0
+DELETE FROM `carsales`.`salesperson` WHERE Commision_Rate=0;
+--update the order where the amount is 100 set the amount 200
+UPDATE `carsales`.`order` SET `amount`=200 WHERE `amount`=100;
+--update the commision rate for salesperson whose commision rate is 26 and set it t 28
+UPDATE `carsales`.`salesperson` SET `commision_Rate`=28 WHERE `commision_Rate`=26;
+--update the rating for the customer whose rating is 100 and set it as 150
+UPDATE `carsales`.`customer` SET `Rating`=150 WHERE `Rating`=100;
+--task completed
